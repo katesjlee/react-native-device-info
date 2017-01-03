@@ -19,6 +19,8 @@ android {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
+    compile (project(path: ':ReactAndroid')) {
+        exclude group: 'com.facebook.react', module: 'react-native'
+    }
     compile 'com.google.android.gms:play-services-gcm:+'
 }
